@@ -21,3 +21,5 @@ gulp.task('watch:js',['js'],function(){
 gulp.task('watch:css',function(){
 	gulp.watch('css/**/*.styl',['css']);
 });
+
+gulp.task('dev',['watch:css','watch:js','dev:server']);
