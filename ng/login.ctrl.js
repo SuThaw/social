@@ -5,7 +5,7 @@ angular
 			UserSvc
 				.login(username,password)
 				.then(function(user){
-					console.log(user);
-				})
+					$scope.$emit('login',user.data);
+				});
 		}
 	});
