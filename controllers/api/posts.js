@@ -1,6 +1,6 @@
 var Post = require('../../models/post');
 var router = require('express').Router();
-
+var websockets = require('../../websockets');
 router.get('/',function(req,res,next){
 	Post
 		.find()
@@ -18,8 +18,11 @@ router.post('/',function(req,res,next){
 		body:req.body.body
 	});
 	post.username = req.auth.username;
+
 	post.save(function(err,post){
 		if(err) return next(err);
+		websockets.broadcast('new_post',post);
+
 		res.json(201,post);
 	});
 });

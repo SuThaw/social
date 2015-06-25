@@ -19,6 +19,7 @@ app.get('/',function(req,res){
 
 
 
-app.listen(3000,function(){
+var server = app.listen(3000,function(){
 	console.log('serve listening on',3000);
 });
+require('./websockets').connect(server);
