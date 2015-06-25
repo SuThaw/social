@@ -19,7 +19,8 @@ app.get('/',function(req,res){
 
 
 
-var server = app.listen(3000,function(){
-	console.log('serve listening on',3000);
+var port = process.env.PORT || 3000;
+var server = app.listen(port,function(){
+	console.log('serve',process.pid,' listening on',port);
 });
 require('./websockets').connect(server);

@@ -10,11 +10,18 @@
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li><a href="/#/">Posts</a></li>
+				<li><a class="post" href="/#/">Posts</a></li>
 				<li><a href="/#/register">Register</a></li>
-				<li><a href="/#/login">Login</a></li>
-			</ul>		
+				<li><a class="login" href="/#/login">Login</a></li>
+			</ul>	
+
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="logout" href="#">Logout</a>				
+				</li>
+			</ul>
 			<p ng-if = 'currentUser' class="navbar-text navbar-right">
+
 				Signed in as {{currentUser.username}}
 			</p>
 		</div>

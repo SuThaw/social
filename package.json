@@ -15,5 +15,11 @@
     "lodash": "^3.9.3",
     "mongoose": "^4.0.5",
     "ws": "^0.7.2"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.2.5",
+    "protractor": "^2.1.0"
   }
 }
